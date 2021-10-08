@@ -7,8 +7,8 @@ body {
 	background-color: rgb(230, 230, 230);
 }
 
-/*SECTIONS*/
-.home-container {
+/* HERO HEADER */
+.heroHeader {
 	display: flex;
 	justify-content: space-evenly;
 	height: 50%;
@@ -20,7 +20,7 @@ body {
 	/* background-position: center; */	
 }
 
-.title-container {
+.heroHeader__title {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -30,29 +30,7 @@ body {
 	/* height: 700px; */
 }
 
-.services-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	height: 40%;
-	width: 100%;
-	text-align: center;
-
-}
-
-.followMe-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	height: 10%;
-	border-top: solid 3px rgb(38, 38, 184);
-	text-align: center;
-	background-image: linear-gradient(rgb(230, 230, 230), rgb(38, 38, 184));
-
-}
-/* *********************************************************** */
-/*HOME CONTAINER*/
-.title-container h1 {
+.heroHeader__title--main {
 	font-size: 3rem;
 	/* margin: 0; */
 	text-align: center;
@@ -63,7 +41,7 @@ body {
 	/* color: rgb(79, 182, 255); */
 }
 
-.title-container h3 {
+.heroHeader__title--motto {
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-style: italic;
@@ -73,9 +51,11 @@ body {
 	color: rgb(2, 91, 255);
 	/* color: rgb(255, 0, 149); */
 }
+
+
 /* *********************************************************** */
 /* CONTACT CONTAINER */
-.contact-container {
+.contactContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -135,7 +115,17 @@ select:hover {
 }
 /* *********************************************************** */
 /* SERVICES CONTAINER */
-.services-container h1 {
+.servicesContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 40%;
+	width: 100%;
+	text-align: center;
+
+}
+
+.servicesContainer__title {
 	/* background-color: antiquewhite; */
 	color: rgb(38, 38, 184);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -143,13 +133,13 @@ select:hover {
 	text-decoration: underline;
 }
 
-.info-container {
+.infoContainer {
 	display: flex;
 	justify-content: space-around;
 	/* background-color: antiquewhite; */
 }
 
-.btn-style {
+.panel--style {
 	font-size: 1.5rem;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	height: 300px;
@@ -169,7 +159,7 @@ select:hover {
 	position: relative;
 }
 
-.btn-style:hover {
+.panel--style:hover {
 	
 	color: rgb(2, 91, 255);
 	opacity: 0.5;
@@ -188,32 +178,32 @@ select:hover {
     transform: translate(-50%, -50%);
 } */
 
-.btn-style h3 {
+.panel--style h3 {
 	position: absolute;
 	margin: 10px;
 	bottom: 0;
 }
 
-.programming {
+.panel--programming {
 	background-image: url(Images/programming.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-.training {
+.panel--training {
 	background-image: url(Images/training.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-.contractService {
+.panel--contractService {
 	background-image: url(Images/contractService.jpg);
 	background-size: cover;
 	background-position: center;
 	
 }
 
-p {
+.servicesContainer p {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 1.8em;
 	
@@ -223,14 +213,26 @@ p {
 
 /* ************************************** */
 /* FOLLOW ME DISPLAY */
-.followMe-container p {
+.followMeContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 10%;
+	border-top: solid 3px rgb(38, 38, 184);
+	text-align: center;
+	background-image: linear-gradient(rgb(230, 230, 230), rgb(38, 38, 184));
+
+}
+
+
+.followMeContainer p {
 	text-shadow: 2px 2px 4px white;
 	color: rgb(231, 12, 147);
 	/* color: rgb(38, 38, 84); --blue*/
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 2rem;	
 }
-.svg-container {
+.followMeContainer__svg {
 	/* position: absolute; */
 	display: flex;
 	justify-content: center;	
@@ -243,17 +245,17 @@ p {
 	/* background-color: rgb(93, 93, 255); */
 }
 
-.facebook {
+.icon--facebook {
 	background-image: url(SVG/facebookIcon.svg);
 	background-size: cover;
 	background-position: center;
 }
-.instagram {
+.icon--instagram {
 	background-image: url(SVG/instagramIcon.svg);
 	background-size: cover;
 	background-position: center;
 }
-.linkedin {
+.icon--linkedin {
 	background-image: url(SVG/linkedinIcon.svg);
 	background-size: cover;
 	background-position: center;
@@ -263,24 +265,24 @@ p {
 /* ************************************** */
 /*PHONE/TABLET DISPLAY*/
 @media screen and (min-height: 1000px) {
-	.contact-container{width: 40%;}
+	.contactContainer{width: 40%;}
 	input {width: 55%;}
 	select {width: 55%;}
-	.services-container{height: 650px;}
+	.servicesContainer{height: 650px;}
 }
 
 @media screen and (max-width: 650px){
-	.home-container {
+	.heroHeader {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;		
 	}
 
-	.info-container {
+	.infoContainer {
 		flex-direction: column;
 		align-items: center;	
 	}
-	.btn-style {
+	.panel--style {
 		height: 100px;
 		width: 300px;
 		margin: 5px;
@@ -288,7 +290,7 @@ p {
 
 		position: relative;
 	}
-	.btn-style h3 {
+	.panel--style h3 {
 		/* CENTERING TEXT */
 		margin: 0;
 		position: absolute;
